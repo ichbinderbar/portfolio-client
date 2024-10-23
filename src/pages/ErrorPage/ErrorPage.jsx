@@ -12,7 +12,7 @@ export default function ErrorPage() {
         <br />
         Clik here to go back to the Home Page
         <br />
-        or navigate BrainFlix using the navigation bar
+        or navigate using the navigation bar
       </Link>
     </div>
   );
