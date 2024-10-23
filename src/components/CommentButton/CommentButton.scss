@@ -1,0 +1,29 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment-section {
+  &__comment-button {
+    background-image: url("../../assets/images/icons/add_comment.svg");
+    background-size: 2rem;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    background-color: #1ca3d4;
+    color: #ffffff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: none;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    @include tablet {
+      width: 12rem;
+      height: 4rem;
+      align-self: flex-end;
+      margin-bottom: 0.2rem;
+    }
+  }
+}

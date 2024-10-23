@@ -1,0 +1,18 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.home-page {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    @include tablet {
+      padding: 1rem 2rem;
+    }
+    @include desktop {
+      padding: 1rem 8rem;
+      flex-direction: row;
+    }
+  }
+}

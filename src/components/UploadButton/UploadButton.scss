@@ -1,0 +1,27 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.navbar {
+  &__upload-button {
+    background-color: $blue;
+    color: #ffffff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: none;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    background-image: url("../../assets/images/icons/upload.svg");
+    background-size: 2rem;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 1rem;
+    cursor: pointer;
+    @include tablet {
+      max-width: 12rem;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Alegreya Sans";
+  background-color: $alabaster;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+}
+
+.notification {
+  display: flex;
+  margin: auto;
+  height: 70vh;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  @include tablet {
+    padding: 2rem;
+  }
+  @include desktop {
+    padding: 9rem;
+  }
+}

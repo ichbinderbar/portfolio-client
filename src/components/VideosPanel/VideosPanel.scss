@@ -1,0 +1,20 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.videos-panel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1rem;
+  max-width: 24rem;
+  @include desktop {
+    padding: 1rem;
+    border-left: solid 2px $mercury;
+    margin: 0 1rem;
+  }
+  &__main-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $mercury;
+  }
+}

@@ -1,0 +1,10 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.home-page {
+  &__video-main-panel {
+    @include desktop {
+      min-width: 37rem;
+    }
+  }
+}

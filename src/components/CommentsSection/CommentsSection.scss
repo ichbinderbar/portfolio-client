@@ -1,0 +1,97 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 2px $mercury;
+  margin-bottom: 0.5rem;
+  &__display-picture {
+    border-radius: 50%;
+    background-image: url("../../assets/images/img.jpg");
+    min-width: 3rem;
+    height: 3rem;
+    background-size: cover;
+  }
+  &__main-comment-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  &__new-comment-container {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    margin: 1rem auto;
+    @include desktop {
+      margin: 2rem auto;
+    }
+  }
+  &__new-comment-user-dp-container {
+    display: flex;
+    width: 4rem;
+    margin-top: 1rem;
+  }
+  &__new-comment-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__comment-subsection-container {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    @include tablet {
+      height: auto;
+      width: 70%;
+    }
+  }
+  &__tag {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $mercury;
+    font-size: 1rem;
+  }
+  &__input-field {
+    display: flex;
+    flex-grow: 1;
+    max-width: 36rem;
+    border: solid 2px $mercury;
+    background-color: $alabaster;
+    border-radius: 5px;
+    font-family: "Avenir Next";
+    padding: 1rem;
+    outline: none;
+    &::placeholder {
+      color: $black;
+      font-size: 1rem;
+    }
+    &:focus {
+      color: $black;
+      font-size: 1rem;
+      border: solid #1ca3d4 2px;
+    }
+    &--invalid {
+      display: flex;
+      flex-grow: 1;
+      background-color: rgba(211, 211, 211, 0.1);
+      border-radius: 5px;
+      font-family: "Avenir Next";
+      padding: 1rem;
+      border: 2px solid #d22d2d;
+    }
+  }
+  &__comment-container {
+    border-bottom: solid 2px $mercury;
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+  }
+}

@@ -1,0 +1,87 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  &__comment-url {
+    text-decoration: underline;
+    color: $red-velvet;
+    cursor: pointer;
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+  &__title {
+    font-size: 1.3rem;
+    font-family: "Playfair Display";
+    @include tablet {
+      font-size: 1.8rem;
+    }
+  }
+  &__top-container {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__author-date-container {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+  &__views-likes-container {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $mercury;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+  &__author {
+    font-weight: 600;
+    padding: 0.5rem 0;
+  }
+  &__likes {
+    color: $mercury;
+    padding: 0.5rem 0;
+  }
+  &__date {
+    color: $mercury;
+    padding: 0.5rem 0;
+    @include tablet {
+      padding-left: 3rem;
+    }
+  }
+  &__views {
+    color: $mercury;
+    padding: 0.5rem 0;
+    @include tablet {
+      padding-right: 3rem;
+    }
+  }
+  &__icon {
+    padding-right: 0.5rem;
+    height: 1rem;
+  }
+  &__description {
+    border-top: solid 2px $mercury;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  &__comments-counter {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
